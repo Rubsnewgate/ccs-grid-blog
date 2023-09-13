@@ -14,7 +14,6 @@
 ## Technologies I used for the blog:
 - HTML 5
 - CSS 3
-- JavaScript
 
 #### CSS Preprocessor:
 - SASS
