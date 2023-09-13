@@ -1,0 +1,37 @@
+// Global resets, font, colors and sizes's variables.
+@import './main.scss';
+
+// Header
+header {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	height: 140px;
+	background-color: $primary-color;
+	.header__icons {
+		@include flexCenter(row, end, center, null, 20px);
+		padding: 0 50px;
+	}
+	nav {
+		background-color: $white;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		.nav__logo {
+			@include flexCenter(row, start, center, null, null);
+			padding: 0 15px;
+			a img {
+				width: 50%;
+				height: 50%;
+			}
+		}
+		.profile__link {
+			@include flexCenter(row, end, center, null, null);
+			padding: 0 50px;
+			a {
+				text-decoration: none;
+				color: $black;
+				font-size: $md-size;
+				font-weight: 500;
+			}
+		}
+	}
+}

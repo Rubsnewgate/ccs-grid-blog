@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 140px;
+  background-color: #40C7A5;
+}
+header .header__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding: 0 50px;
+}
+header nav {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+header nav .nav__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 0 15px;
+}
+header nav .nav__logo a img {
+  width: 50%;
+  height: 50%;
+}
+header nav .profile__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 0 50px;
+}
+header nav .profile__link a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.home__main {
+  padding: 0 40px;
+}
+
+.main__blog {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  height: auto;
+  margin-top: 50px;
+  padding: 40px;
+  background-color: #E6E8EC;
+  border-radius: 10px;
+}
+.main__blog .main__blog-img {
+  grid-column: 1;
+}
+.main__blog .main__blog-img p {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main__blog .main__blog-img img {
+  width: 90%;
+  border-radius: 10px;
+}
+.main__blog .main__blog-title {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.main__blog .main__blog-title h2 {
+  font-size: 3.5rem;
+}
+.main__blog .main__blog-title p {
+  font-size: 2rem;
+}
+.main__blog .main__blog-title button {
+  padding: 10px;
+  width: 150px;
+  height: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #40C7A5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main__blog .main__blog-title button:hover {
+  transform: scale(1.1);
+}
+.main__blog .main__blog-title button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.general__blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 50px 20px;
+  margin-bottom: 50px;
+}
+.general__blogs h2 {
+  grid-area: 1/2/2/3;
+  margin: 50px 0 0 0;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.general__blogs .post img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.general__blogs .post h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.general__blogs .post p {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.general__blogs .post button {
+  padding: 10px;
+  width: 150px;
+  height: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #40C7A5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.general__blogs .post button:hover {
+  transform: scale(1.1);
+}
+.general__blogs .post-1 {
+  grid-area: 2/1/3/2;
+}
+.general__blogs .post-2 {
+  grid-area: 2/2/3/3;
+}
+.general__blogs .post-3 {
+  grid-area: 2/3/3/4;
+}
+.general__blogs .post-4 {
+  grid-area: 3/1/4/2;
+}
+.general__blogs .post-5 {
+  grid-area: 3/2/4/3;
+}
+.general__blogs .post-6 {
+  grid-area: 3/3/4/4;
+}
+
+.contact__us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: #E6E8EC;
+  border-radius: 10px;
+}
+.contact__us img {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+}
+.contact__us .mail__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact__us .mail__container h4 {
+  font-size: 1.8rem;
+  padding: 10px;
+}
+.contact__us .mail__container p {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+.contact__us .text__us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact__us .text__us h4 {
+  font-size: 1.8rem;
+  padding: 10px;
+}
+.contact__us .text__us p {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100px;
+  background-color: #40C7A5;
+}
+footer p {
+  grid-row: 2;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #212129;
+}
+
+/*# sourceMappingURL=blogs.css.map */

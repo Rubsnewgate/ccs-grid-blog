@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 140px;
+  background-color: #40C7A5;
+}
+header .header__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding: 0 50px;
+}
+header nav {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+header nav .nav__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 0 15px;
+}
+header nav .nav__logo a img {
+  width: 50%;
+  height: 50%;
+}
+header nav .profile__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 0 50px;
+}
+header nav .profile__link a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.home__main {
+  padding: 0 40px;
+}
+
+.gamers__blog {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+}
+.gamers__blog .img__container {
+  grid-row: 1;
+  padding: 50px 0 0 0;
+}
+.gamers__blog .img__container img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+}
+.gamers__blog .img__container figcaption {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 10px;
+}
+.gamers__blog .subtitle__container {
+  grid-row: 2;
+}
+.gamers__blog .subtitle__container .blog__separator {
+  font-size: 2.5rem;
+}
+.gamers__blog .subtitle__container hr {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #000;
+}
+.gamers__blog .post__container {
+  grid-row: 3;
+}
+.gamers__blog .post__container .blog__title {
+  margin-bottom: 50px;
+  font-size: 3.5rem;
+}
+.gamers__blog .post__container .text__container {
+  margin-bottom: 50px;
+}
+.gamers__blog .post__container .text__container p {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.contact__us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: #E6E8EC;
+  border-radius: 10px;
+}
+.contact__us img {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+}
+.contact__us .mail__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact__us .mail__container h4 {
+  font-size: 1.8rem;
+  padding: 10px;
+}
+.contact__us .mail__container p {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+.contact__us .text__us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact__us .text__us h4 {
+  font-size: 1.8rem;
+  padding: 10px;
+}
+.contact__us .text__us p {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100px;
+  background-color: #40C7A5;
+}
+footer p {
+  grid-row: 2;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #212129;
+}
+
+/*# sourceMappingURL=blog.css.map */
