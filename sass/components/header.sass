@@ -1,0 +1,36 @@
+@use '../base/colors'
+@use '../base/flexcenter'
+@use '../base/typography'
+
+.header
+	display: grid
+	grid-template-rows: 1fr 1fr
+	height: 120px
+	background-color: colors.$primary-color
+
+	.social-networks
+		@include flexcenter.flexbox(row, end, center, null, 20px)
+		padding: 0 20px
+
+	.navbar
+		display: grid
+		grid-template-columns: 2fr 1fr
+		background-color: colors.$white
+		padding: 0 20px
+
+		.navbar__logo
+			@include flexcenter.flexbox(row, start, center, null, null)
+
+			a img
+				width: 40px
+				height: 40px
+
+		.navbar__about
+			@include flexcenter.flexbox(row, end, center, null, null)
+			padding: 0 50px
+
+			a
+				font-size: typography.$md-size
+				font-weight: 500
+				color: colors.$black
+				text-decoration: none

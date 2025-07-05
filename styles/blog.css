@@ -1,122 +1,153 @@
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
   box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "DM Sans", sans-serif;
 }
 
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
 }
-
 body {
-  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-header {
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.header {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  height: 140px;
+  height: 120px;
   background-color: #40C7A5;
 }
-header .header__icons {
+.header .social-networks {
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
   gap: 20px;
-  padding: 0 50px;
+  padding: 0 20px;
 }
-header nav {
-  background-color: #fff;
+.header .navbar {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  background-color: #fff;
+  padding: 0 20px;
 }
-header nav .nav__logo {
+.header .navbar .navbar__logo {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  padding: 0 15px;
 }
-header nav .nav__logo a img {
-  width: 50%;
-  height: 50%;
+.header .navbar .navbar__logo a img {
+  width: 40px;
+  height: 40px;
 }
-header nav .profile__link {
+.header .navbar .navbar__about {
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
   padding: 0 50px;
 }
-header nav .profile__link a {
-  text-decoration: none;
-  color: #000;
-  font-size: 2rem;
+.header .navbar .navbar__about a {
+  font-size: 1.25rem;
   font-weight: 500;
+  color: #000;
+  text-decoration: none;
 }
 
-.home__main {
-  padding: 0 40px;
+.footer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100px;
+  background-color: #40C7A5;
+}
+.footer p {
+  grid-row: 2;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.125rem;
+  color: #fff;
+  text-align: center;
+  background-color: #212129;
 }
 
-.gamers__blog {
+.main-content {
+  padding: 0 20px;
+}
+
+.gamers__news {
   display: grid;
   grid-template-rows: repeat(3, auto);
 }
-.gamers__blog .img__container {
+.gamers__news .hero {
   grid-row: 1;
   padding: 50px 0 0 0;
 }
-.gamers__blog .img__container img {
+.gamers__news .hero img {
   width: 100%;
   height: 80%;
   border-radius: 10px;
 }
-.gamers__blog .img__container figcaption {
-  font-size: 1.8rem;
-  font-weight: 500;
+.gamers__news .hero figcaption {
   padding: 10px;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
-.gamers__blog .subtitle__container {
+.gamers__news .separator {
   grid-row: 2;
 }
-.gamers__blog .subtitle__container .blog__separator {
-  font-size: 2.5rem;
+.gamers__news .separator .subtitle {
+  font-size: 1.563rem;
 }
-.gamers__blog .subtitle__container hr {
+.gamers__news .separator hr {
   width: 100%;
   margin: 10px 0;
   background-color: #000;
 }
-.gamers__blog .post__container {
+.gamers__news .post {
   grid-row: 3;
 }
-.gamers__blog .post__container .blog__title {
+.gamers__news .post .post__title {
   margin-bottom: 50px;
-  font-size: 3.5rem;
+  font-size: 2.188rem;
 }
-.gamers__blog .post__container .text__container {
+.gamers__news .post .post__text {
   margin-bottom: 50px;
 }
-.gamers__blog .post__container .text__container p {
+.gamers__news .post .post__text p {
   margin-bottom: 20px;
-  font-size: 2rem;
-  line-height: 1.5;
+  font-size: 1.25rem;
 }
 
 .contact__us {
@@ -129,65 +160,33 @@ header nav .profile__link a {
   border-radius: 10px;
 }
 .contact__us img {
-  width: 150px;
-  height: 150px;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
 }
 .contact__us .mail__container {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 .contact__us .mail__container h4 {
-  font-size: 1.8rem;
   padding: 10px;
+  font-size: 1.125rem;
 }
 .contact__us .mail__container p {
-  font-size: 1.6rem;
   padding: 10px;
+  font-size: 1rem;
 }
 .contact__us .text__us {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 .contact__us .text__us h4 {
-  font-size: 1.8rem;
   padding: 10px;
+  font-size: 1.125rem;
 }
 .contact__us .text__us p {
-  font-size: 1.6rem;
   padding: 10px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "DM Sans", sans-serif;
-}
-
-footer {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  height: 100px;
-  background-color: #40C7A5;
-}
-footer p {
-  grid-row: 2;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.8rem;
-  color: #fff;
-  background-color: #212129;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=blog.css.map */

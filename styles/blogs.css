@@ -1,80 +1,112 @@
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
   box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "DM Sans", sans-serif;
 }
 
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
 }
-
 body {
-  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-header {
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.header {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  height: 140px;
+  height: 120px;
   background-color: #40C7A5;
 }
-header .header__icons {
+.header .social-networks {
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
   gap: 20px;
-  padding: 0 50px;
+  padding: 0 20px;
 }
-header nav {
-  background-color: #fff;
+.header .navbar {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  background-color: #fff;
+  padding: 0 20px;
 }
-header nav .nav__logo {
+.header .navbar .navbar__logo {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  padding: 0 15px;
 }
-header nav .nav__logo a img {
-  width: 50%;
-  height: 50%;
+.header .navbar .navbar__logo a img {
+  width: 40px;
+  height: 40px;
 }
-header nav .profile__link {
+.header .navbar .navbar__about {
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
   padding: 0 50px;
 }
-header nav .profile__link a {
-  text-decoration: none;
-  color: #000;
-  font-size: 2rem;
+.header .navbar .navbar__about a {
+  font-size: 1.25rem;
   font-weight: 500;
+  color: #000;
+  text-decoration: none;
 }
 
-.home__main {
+.footer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100px;
+  background-color: #40C7A5;
+}
+.footer p {
+  grid-row: 2;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.125rem;
+  color: #fff;
+  text-align: center;
+  background-color: #212129;
+}
+
+.main-content {
   padding: 0 40px;
 }
 
-.main__blog {
+.principal-post {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   height: auto;
@@ -83,36 +115,36 @@ header nav .profile__link a {
   background-color: #E6E8EC;
   border-radius: 10px;
 }
-.main__blog .main__blog-img {
+.principal-post .principal-post__hero {
   grid-column: 1;
 }
-.main__blog .main__blog-img p {
+.principal-post .principal-post__hero p {
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
-.main__blog .main__blog-img img {
+.principal-post .principal-post__hero img {
   width: 90%;
   border-radius: 10px;
 }
-.main__blog .main__blog-title {
+.principal-post .principal-post__title {
   grid-column: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 25px;
 }
-.main__blog .main__blog-title h2 {
-  font-size: 3.5rem;
+.principal-post .principal-post__title h2 {
+  font-size: 2.188rem;
 }
-.main__blog .main__blog-title p {
-  font-size: 2rem;
+.principal-post .principal-post__title p {
+  font-size: 1.25rem;
 }
-.main__blog .main__blog-title button {
-  padding: 10px;
+.principal-post .principal-post__title button {
   width: 150px;
   height: 40px;
-  font-size: 1.8rem;
+  padding: 0 10px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #fff;
   background-color: #40C7A5;
@@ -120,45 +152,42 @@ header nav .profile__link a {
   border-radius: 10px;
   cursor: pointer;
 }
-.main__blog .main__blog-title button:hover {
-  transform: scale(1.1);
-}
-.main__blog .main__blog-title button a {
+.principal-post .principal-post__title button a {
   color: #fff;
   text-decoration: none;
 }
 
-.general__blogs {
+.general-post {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
   gap: 50px 20px;
   margin-bottom: 50px;
 }
-.general__blogs h2 {
+.general-post h2 {
   grid-area: 1/2/2/3;
   margin: 50px 0 0 0;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2.188rem;
 }
-.general__blogs .post img {
+.general-post .post img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.general__blogs .post h3 {
-  font-size: 1.8rem;
+.general-post .post h3 {
+  font-size: 1.125rem;
   margin-bottom: 20px;
 }
-.general__blogs .post p {
-  font-size: 1.8rem;
+.general-post .post p {
+  font-size: 1.125rem;
   margin-bottom: 20px;
 }
-.general__blogs .post button {
-  padding: 10px;
+.general-post .post button {
   width: 150px;
   height: 40px;
-  font-size: 1.8rem;
+  padding: 0 10px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #fff;
   background-color: #40C7A5;
@@ -166,25 +195,22 @@ header nav .profile__link a {
   border-radius: 10px;
   cursor: pointer;
 }
-.general__blogs .post button:hover {
-  transform: scale(1.1);
-}
-.general__blogs .post-1 {
+.general-post .post-1 {
   grid-area: 2/1/3/2;
 }
-.general__blogs .post-2 {
+.general-post .post-2 {
   grid-area: 2/2/3/3;
 }
-.general__blogs .post-3 {
+.general-post .post-3 {
   grid-area: 2/3/3/4;
 }
-.general__blogs .post-4 {
+.general-post .post-4 {
   grid-area: 3/1/4/2;
 }
-.general__blogs .post-5 {
+.general-post .post-5 {
   grid-area: 3/2/4/3;
 }
-.general__blogs .post-6 {
+.general-post .post-6 {
   grid-area: 3/3/4/4;
 }
 
@@ -198,22 +224,20 @@ header nav .profile__link a {
   border-radius: 10px;
 }
 .contact__us img {
-  width: 150px;
-  height: 150px;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
 }
-.contact__us .mail__container {
+.contact__us .email {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.contact__us .mail__container h4 {
-  font-size: 1.8rem;
-  padding: 10px;
+.contact__us .email h4 {
+  font-size: 1.125rem;
 }
-.contact__us .mail__container p {
-  font-size: 1.6rem;
-  padding: 10px;
+.contact__us .email p {
+  font-size: 1rem;
 }
 .contact__us .text__us {
   display: flex;
@@ -221,42 +245,10 @@ header nav .profile__link a {
   align-items: center;
 }
 .contact__us .text__us h4 {
-  font-size: 1.8rem;
-  padding: 10px;
+  font-size: 1.125rem;
 }
 .contact__us .text__us p {
-  font-size: 1.6rem;
-  padding: 10px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "DM Sans", sans-serif;
-}
-
-footer {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  height: 100px;
-  background-color: #40C7A5;
-}
-footer p {
-  grid-row: 2;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.8rem;
-  color: #fff;
-  background-color: #212129;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=blogs.css.map */

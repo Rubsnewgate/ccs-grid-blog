@@ -1,0 +1,42 @@
+// Global resets, font, colors and sizes's variables.
+@use './base/colors'
+@use './base/flexcenter'
+@use './base/resets'
+@use './base/typography'
+
+// Import header
+@use './components/header'
+
+// Import footer
+@use './components/footer'
+
+// Import button
+@use './components/button'
+
+// Main
+.main-content
+	display: grid
+	grid-template-columns: 1fr 4fr 1fr
+	height: calc(100vh - 140px)
+	padding: 50px 0
+	background: url('https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover fixed
+
+
+// Hero
+.hero
+	grid-column: 2
+	@include flexcenter.flexbox(column, center, center, null, 50px)
+	height: 100%
+
+	.hero__title
+		text-align: center
+		font-size: typography.$lg-size
+		color: colors.$white
+
+	.hero__btn
+		@include button.buttonStyle
+		margin: 0 auto
+
+		a
+			color: colors.$white
+			text-decoration: none

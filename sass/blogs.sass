@@ -1,0 +1,137 @@
+// Global resets, font, colors and sizes's variables.
+@use './base/colors'
+@use './base/flexcenter'
+@use './base/resets'
+@use './base/typography'
+
+
+// Import header
+@use './components/header'
+
+// Import footer
+@use './components/footer'
+
+// Import button
+@use './components/button'
+
+// main section
+.main-content
+	padding: 0 40px;
+
+// Hero
+.principal-post
+	display: grid
+	grid-template-columns: 1.5fr 1fr
+	height: auto
+	margin-top: 50px
+	padding: 40px
+	background-color: colors.$tertiary-color
+	border-radius: 10px
+
+	.principal-post__hero
+		grid-column: 1
+
+		p
+			margin-bottom: 20px
+			font-size: typography.$md-size
+			font-weight: bold
+
+		img
+			width: 90%
+			border-radius: 10px
+
+	.principal-post__title
+		grid-column: 2
+		@include flexcenter.flexbox(column, center, null, null, 25px)
+
+		h2
+			font-size: typography.$lg-size-two
+
+		p
+			font-size: typography.$md-size
+
+		button
+			@include button.buttonStyle
+			a
+				color: colors.$white
+				text-decoration: none
+
+// blogs section
+.general-post
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: repeat(3, auto)
+	gap: 50px 20px
+	margin-bottom: 50px
+
+	h2
+		grid-area: 1 / 2 / 2 / 3
+		margin: 50px 0 0 0
+		text-align: center
+		font-size: typography.$lg-size-two
+
+	.post
+		img
+			width: 100%
+			border-radius: 10px
+			margin-bottom: 20px
+
+		h3
+			font-size: typography.$sm-size
+			margin-bottom: 20px
+
+		p
+			font-size: typography.$sm-size
+			margin-bottom: 20px
+
+		button
+			@include button.buttonStyle
+
+	.post-1
+		grid-area: 2 / 1 / 3 / 2
+
+	.post-2
+		grid-area: 2 / 2 / 3 / 3
+
+	.post-3
+		grid-area: 2 / 3 / 3 / 4
+
+	.post-4
+		grid-area: 3 / 1 / 4 / 2
+
+	.post-5
+		grid-area: 3 / 2 / 4 / 3
+
+	.post-6
+		grid-area: 3 / 3 / 4 / 4
+
+// Contact section
+.contact__us
+	@include flexcenter.flexbox(row, space-between, null, null, null)
+	margin-bottom: 50px
+	padding: 10px
+	background-color: colors.$tertiary-color
+	border-radius: 10px
+
+	img
+		width: 50px
+		height: 50px
+		padding-right: 10px
+
+	.email
+		@include flexcenter.flexbox(row, null, center, null, null)
+
+		h4
+			font-size: typography.$sm-size
+
+		p
+			font-size: typography.$sm-size-two
+
+	.text__us
+		@include flexcenter.flexbox(row, null, center, null, null)
+
+		h4
+			font-size: typography.$sm-size
+
+		p
+			font-size: typography.$sm-size-two

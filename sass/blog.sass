@@ -1,0 +1,92 @@
+// Global resets, fonts and colors.
+@use './base/resets'
+@use './base/colors'
+@use './base/flexcenter'
+@use './base/typography'
+
+// Import header
+@use './components/header'
+
+// Footer component
+@use './components/footer'
+
+// Blog section
+.main-content
+	padding: 0 20px
+
+.gamers__news
+	display: grid
+	grid-template-rows: repeat(3, auto)
+
+	.hero
+		grid-row: 1
+		padding: 50px 0 0 0
+
+		img
+			width: 100%
+			height: 80%
+			border-radius: 10px
+
+		figcaption
+			padding: 10px
+			font-size: typography.$sm-size
+			font-weight: 500
+
+	.separator
+		grid-row: 2
+
+		.subtitle
+			font-size: typography.$md-size-two
+
+		hr
+			width: 100%
+			margin: 10px 0
+			background-color: colors.$black
+
+	.post
+		grid-row: 3
+
+		.post__title
+			margin-bottom: 50px
+			font-size: typography.$lg-size-two
+
+		.post__text
+			margin-bottom: 50px
+
+			p
+				margin-bottom: 20px
+				font-size: typography.$md-size
+
+// Contact
+.contact__us
+	@include flexcenter.flexbox (row, space-between, null, null, null)
+	margin-bottom: 50px
+	padding: 10px
+	background-color: colors.$tertiary-color
+	border-radius: 10px
+
+	img
+		width: 50px
+		height: 50px
+		padding-left: 10px
+
+	.mail__container
+		@include flexcenter.flexbox(row, null, null, null, null)
+
+		h4
+			padding: 10px
+			font-size: typography.$sm-size
+
+		p
+			padding: 10px
+			font-size: typography.$sm-size-two
+
+	.text__us
+		@include flexcenter.flexbox(row, null, null, null, null)
+		h4
+			padding: 10px
+			font-size: typography.$sm-size
+
+		p
+			padding: 10px
+			font-size: typography.$sm-size-two

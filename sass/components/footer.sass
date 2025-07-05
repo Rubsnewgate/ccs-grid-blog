@@ -1,0 +1,17 @@
+@use '../base/colors'
+@use '../base/typography'
+
+.footer
+	display: grid
+	grid-template-rows: repeat(2, 1fr)
+	height: 100px
+	background-color: colors.$primary-color
+
+	p
+		grid-row: 2
+		width: 100%
+		padding: 20px
+		font-size: typography.$sm-size
+		color: colors.$white
+		text-align: center
+		background-color: colors.$secondary-color
